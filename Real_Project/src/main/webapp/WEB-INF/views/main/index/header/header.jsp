@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,13 @@
 			<div class="top">
 				<ul>
 					<!-- 오른쪽 위 -->
+					<c:if test="${ empty user }">
 					<li><a href="/sub/login.html"><span>로그인</span></a></li>
+					</c:if>
+					<c:if test="${ not empty user }">
+					<li><a href="/sub/login.html"><span>로그아웃</span></a></li>
+					</c:if>
+					
 					<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
 						<div class="pc_toplink_menu" style="display: none;">
 							<p>
@@ -43,8 +50,8 @@
 			</div>
 			<div class="bottom">
 				<!-- 왼쪽 위 큰 로고 -->
-				<a class="logo" href="/"><img
-					src="${ pageContext.request.contextPath }/resources/images/main/header/logo.png"></a>
+				<a class="logo" href="main.do"><img
+					src="${ pageContext.request.contextPath }/resources/images/main/header/오스카_소.png"></a>
 				<div class="gnb">
 					<div class="menu">
 						<div class="wrap">
