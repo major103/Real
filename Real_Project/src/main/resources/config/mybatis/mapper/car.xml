@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="car">
+
+<!-- 전체 조회 -->
+<select id="car_list" resultType="vo.CarVo">
+	select * from car
+</select>
+
+<!--  1건 조회 -->
+<select id="car_one" parameterType="int" resultType="vo.CarVo">
+	select * from car where car_index=#{ car_index }
+</select>
+
+<!-- insert -->
+<insert id="car_insert" parameterType="vo.CarVo">
+	insert into car
+	values( seq_car_index.nextVal,
+			#{ car_name },
+			#{ car_size },
+			#{ co_name },
+			#{ car_price },
+			#{ car_fuel },
+			#{ car_type },
+			#{ car_fcost },
+			#{ car_output },
+			#{ car_torq },
+			#{ car_exhaust },
+			#{ car_engine },
+			#{ car_drive },
+			#{ car_change },
+			#{ car_photo }
+			)
+</insert>
+
+<update id="car_update" parameterType="vo.CarVo">
+	update car set
+		car_name=#{car_name},
+		car_size=#{car_size},
+		co_name=#{co_name},
+		car_price=#{car_price},
+		car_fuel=#{car_fuel},
+		car_type=#{car_type},
+		car_fcost=#{car_fcost},
+		car_output=#{car_output},
+		car_torq=#{car_torq},
+		car_exhaust=#{car_exhaust},
+		car_drive=#{car_drive},
+		car_change=#{car_change},
+		car_photo=#{car_photo}
+		where car_index=#{car_index}
+</update>
+
+<delete id="car_delete" parameterType="int">
+	delete from car where car_index=#{car_index}
+</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

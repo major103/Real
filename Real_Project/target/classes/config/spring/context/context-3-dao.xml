@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		
+		
+		<bean id="car_dao" class="dao.CarDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="chatting_dao" class="dao.ChattingDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="company_dao" class="dao.CompanyDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="estimate_dao" class="dao.EstimateDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="free_dao" class="dao.FreeDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="grade_dao" class="dao.GradeDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="news_dao" class="dao.NewsDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="recommend_dao" class="dao.RecommendDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="reply_dao" class="dao.ReplyDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="user_dao" class="dao.UserDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		<bean id="withdraw_dao" class="dao.WithdrawDaoImpl">
+			<property name="sqlSession" ref="sqlSession"></property>
+		</bean>
+		
+		
+		
+</beans>

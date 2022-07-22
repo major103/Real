@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="chatting">
+
+<!-- 전체 유저조회 -->
+<select id="chatting_list" resultType="vo.ChattingVo">
+	select * from chatting order by c_index desc
+</select>
+
+<insert id="chatting_insert" parameterType="vo.ChattingVo">
+	insert into chatting values(
+		seq_chatting_c_index.nextVal,
+		#{c_title},
+		#{c_content},
+		#{c_file},
+		sysdate,
+		#{c_ip},
+		#{u_id}		
+	)
+	
+</insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
