@@ -70,6 +70,7 @@
 					<ul>
 						<li><a href="/sub/list.html?ttl=NEWCAR"><span>견적내기</span></a></li>
 						<li><a href="/sub/list.html?ttl=NEWS"><span>매장검색</span></a></li>
+						<li><a href="news.do"><span>뉴스</span></a></li>
 						<li><a href="/sub/list.html?ttl=COLUMN"><span>브랜드검색</span></a></li>
 						<li class="top_menu"><a href="javascript:void(0)"><span>게시판</span></a>
 							<div class="pc_toplink_menu" style="display: none;">

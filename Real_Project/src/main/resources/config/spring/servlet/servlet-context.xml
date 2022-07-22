@@ -27,17 +27,19 @@
 	<context:annotation-config/>
 	<!-- 수동생성 -->
 	
+	<!-- main -->
+	<beans:bean class="controller.MainController">
+		
+	</beans:bean>
+	
+	
 	
 	<!-- Admin service -->
 	<beans:bean class="controller.AdminController">
 		<beans:property name="admin_service" ref="admin_service"></beans:property>
 	</beans:bean>
 	
-	<beans:bean class="controller.MainController">
-		
-	</beans:bean>
-	
-	
+	<!-- controller -->
 	
 	<beans:bean class="controller.FreeController">
 		<beans:property name="free_dao" ref="free_dao"></beans:property>
@@ -53,7 +55,8 @@
 		<beans:property name="user_dao" ref="user_dao"></beans:property>
 	</beans:bean>
 	
-	
+	<!-- CKEditorFileUploadController -->
+	<beans:bean class="controller.CKEditorFileUploadController"/>
 	
 	
 	
