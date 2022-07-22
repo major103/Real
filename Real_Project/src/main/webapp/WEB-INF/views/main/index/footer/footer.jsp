@@ -12,7 +12,7 @@
 			<footer>
 				<!-- 흰글씨 -->
 				<div class="footer_logo">
-					<a href="/index.html"><img src="../images/main/footer/logo.png"
+					<a href="/index.html"><img src="${ pageContext.request.contextPath }/resources/images/main/footer/logo.png"
 						alt="KAYA MEDIA CORPORATION" /></a>
 				</div>
 				<div class="company_info">

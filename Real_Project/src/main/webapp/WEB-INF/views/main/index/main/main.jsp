@@ -15,7 +15,7 @@
 						<div class="line_L"></div>
 						<div class="line_R"></div>
 						<p>NEW CAR</p>
-						<img src="../images/sub/sub_visual_text_01.png" />
+						<img src="${ pageContext.request.contextPath }/resources/images/sub/sub_visual_text_01.png" />
 					</div>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 							<a href="/sub/view.html?no=6905&cate1Name=NEWCAR">
 								<div class="on">
 									<div class="icon"></div>
-								</div> <img src="../_goods_img/1656486778310459_1.jpg">
+								</div> <img src="${ pageContext.request.contextPath }/resources/_goods_img/1656486778310459_1.jpg">
 							</a>
 							<div>
 								<a href="/sub/view.html?no=6905&cate1Name=NEWCAR">
@@ -62,7 +62,7 @@
 							<li><a href="/sub/view.html?no=6904&cate1Name=NEWCAR">
 									<div class="on">
 										<div class="icon"></div>
-									</div> <img src="../_goods_img/1656486621136026_1.jpg">
+									</div> <img src="${ pageContext.request.contextPath }/resources/_goods_img/1656486621136026_1.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6904&cate1Name=NEWCAR">
@@ -79,7 +79,7 @@
 							<li><a href="/sub/view.html?no=6903&cate1Name=NEWCAR">
 									<div class="on">
 										<div class="icon"></div>
-									</div> <img src="../_goods_img/1656486312557916_1.jpg">
+									</div> <img src="${ pageContext.request.contextPath }/resources/_goods_img/1656486312557916_1.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6903&cate1Name=NEWCAR">
@@ -95,7 +95,7 @@
 							<li><a href="/sub/view.html?no=6902&cate1Name=NEWCAR">
 									<div class="on">
 										<div class="icon"></div>
-									</div> <img src="../_goods_img/1656486202706785_1.jpg">
+									</div> <img src="${ pageContext.request.contextPath }/resources/_goods_img/1656486202706785_1.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6902&cate1Name=NEWCAR">
@@ -113,7 +113,7 @@
 									<div class="on">
 										<div class="icon"></div>
 									</div> <img
-									src="../_goods_img/1656419923633840_MTRP 220600 INTAKE 005.jpg">
+									src="${ pageContext.request.contextPath }/resources/_goods_img/1656419923633840_MTRP 220600 INTAKE 005.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6900&cate1Name=NEWCAR">
@@ -138,7 +138,7 @@
 							<li><a href="/sub/view.html?no=6899&cate1Name=NEWCAR">
 									<div class="on">
 										<div class="icon"></div>
-									</div> <img src="../_goods_img/1656406104485033_1.jpg">
+									</div> <img src="${ pageContext.request.contextPath }/_goods_img/1656406104485033_1.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6899&cate1Name=NEWCAR">
@@ -156,7 +156,7 @@
 									<div class="on">
 										<div class="icon"></div>
 									</div> <img
-									src="../_goods_img/1656226820561616_MTRP 220600 EXPLORER.jpg">
+									src="${ pageContext.request.contextPath }/_goods_img/1656226820561616_MTRP 220600 EXPLORER.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6895&cate1Name=NEWCAR">
@@ -173,7 +173,7 @@
 							<li><a href="/sub/view.html?no=6892&cate1Name=NEWCAR">
 									<div class="on">
 										<div class="icon"></div>
-									</div> <img src="../_goods_img/1656058089617413_1.jpg">
+									</div> <img src="${ pageContext.request.contextPath }/_goods_img/1656058089617413_1.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6892&cate1Name=NEWCAR">
@@ -190,7 +190,7 @@
 							<li><a href="/sub/view.html?no=6891&cate1Name=NEWCAR">
 									<div class="on">
 										<div class="icon"></div>
-									</div> <img src="../_goods_img/1656039689989643_1.jpg">
+									</div> <img src="${ pageContext.request.contextPath }/_goods_img/1656039689989643_1.jpg">
 							</a>
 								<div>
 									<a href="/sub/view.html?no=6891&cate1Name=NEWCAR">

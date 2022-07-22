@@ -4,11 +4,14 @@
 <html lang="ko">
 <head>
 <title>NEWCAR | MOTOR TREND</title>
-<link rel="stylesheet" href="../common/css/basic.css">
-<link rel="stylesheet" href="../common/css/style.css">
-<link rel="stylesheet" href="../common/plug/slick/slick.css">
-
-
+<link rel="stylesheet" 
+      href="${ pageContext.request.contextPath }/resources/css/basic.css">
+<link rel="stylesheet" 
+	href="${ pageContext.request.contextPath }/resources/css/style.css">
+<link rel="stylesheet" 
+	href="${ pageContext.request.contextPath }/resources/css/font.css">
+<link rel="stylesheet" 
+      href="${ pageContext.request.contextPath }/resources/plug/slick/slick.css">
 </head>
 <body>
 

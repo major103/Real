@@ -35,7 +35,7 @@
 								<input name="textValue" id="textValue" type="search"
 									placeholder="search" onkeydown="javascript: onkeyDown2();">
 							</div>
-							<img class="btn" src="../images/main/header/icon_s.png"
+							<img class="btn" src="${ pageContext.request.contextPath }/resources/images/main/header/icon_s.png"
 								onclick="javascript: btnClick()">
 						</div>
 					</li>
@@ -44,7 +44,7 @@
 			<div class="bottom">
 				<!-- 왼쪽 위 큰 로고 -->
 				<a class="logo" href="/"><img
-					src="../images/main/header/logo.png"></a>
+					src="${ pageContext.request.contextPath }/resources/images/main/header/logo.png"></a>
 				<div class="gnb">
 					<div class="menu">
 						<div class="wrap">
@@ -52,17 +52,17 @@
 								<span></span><span></span><span></span>
 							</div>
 							<div class="off">
-								<img src="../images/main/header/m_close.png">
+								<img src="${ pageContext.request.contextPath }/resources/images/main/header/m_close.png">
 							</div>
 						</div>
 					</div>
 					<div class="search">
-						<img src="../images/main/header/m_search.png">
+						<img src="${ pageContext.request.contextPath }/resources/images/main/header/m_search.png">
 						<div class="right">
 							<input id="mText" name="" type="text" placeholder="search"
 								onkeydown="javascript: onkeyDown3();">
 							<div class="close">
-								<img src="../images/main/header/m_close.png"
+								<img src="${ pageContext.request.contextPath }/resources/images/main/header/m_close.png"
 									onclick="javascript: clearText()">
 							</div>
 						</div>
