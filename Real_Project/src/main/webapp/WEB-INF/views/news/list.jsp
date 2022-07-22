@@ -4,10 +4,10 @@
 <html lang="ko">
 <head>
 <title>NEWCAR | MOTOR TREND</title>
-<link rel="stylesheet" href="../common/css/basic.css">
-<link rel="stylesheet" href="../common/css/style.css">
-<link rel="stylesheet" href="../common/plug/slick/slick.css">
-<%-- <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/product.css"> --%>
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resource/common/css/basic.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resource/common/css/style.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resource/common/plug/slick/slick.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/news.css">
 
 </head>
 <body>
@@ -17,13 +17,13 @@
 		
 		
 		<!-- Header Include -->
-			<%@include file="../index/header/header.jsp" %>
+			<%@include file="../main/index/header/header.jsp" %>
 
 		<!-- Body Include   -->
-			<%@include file="../../news/news_index.jsp" %>
+			<%@include file="news_index.jsp" %>
 		
 		<!-- Footer Include -->
-			<%@include file="../index/footer/footer.jsp" %>
+			<%@include file="../main/index/footer/footer.jsp" %>
 	
 
 

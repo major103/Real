@@ -74,7 +74,7 @@
 						<li class="top_menu"><a href="javascript:void(0)"><span>게시판</span></a>
 							<div class="pc_toplink_menu" style="display: none;">
 								<p>
-									<a href="http://imagazinekorea.com/etc/online_ad.asp"
+									<a href="news.do"
 										target="_blank">뉴스</a>
 								</p>
 								<p>
