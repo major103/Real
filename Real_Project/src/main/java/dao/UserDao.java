@@ -6,28 +6,22 @@ import java.util.Map;
 import vo.UserVo;
 
 public interface UserDao {
+	
+	public List<UserVo> list();
+	
+	public UserVo selectOne(String u_id);
 
-	List<UserVo> list();
+	public UserVo selectOne1(Map map);
 	
-	UserVo selectOne(String u_id);
-	UserVo selectOne1(Map map);
-	UserVo selectOne2(Map map);
-	UserVo selectOne3(Map map);
-	UserVo update(String new_pwd);
+	public UserVo selectOne2(Map map);
 	
-	int insert(UserVo vo) throws Exception;
-	
-	int update(UserVo vo) throws Exception;
-	
-	int delete(int idx) throws Exception;
+	public UserVo selectOne3(Map map);
 
-	
+	public UserVo update(String new_pwd);
 
-	
+	public int insert(UserVo vo);
 
 	
 	
 
-	
-	
 }
