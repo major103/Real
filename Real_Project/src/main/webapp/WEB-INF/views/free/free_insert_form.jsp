@@ -10,6 +10,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+
 <script type="text/javascript">
 	
 	function send(f){
@@ -38,12 +39,26 @@
 
 </script>
 
+<style type="text/css">
+
+	#box {
+		width: 800px;
+		height : auto;
+	}
+	
+	#content {
+		width: 700px;
+		height: 200px;
+	}
+
+</style>
+
 </head>
 <body>
 
 <form method="POST" enctype="multipart/form-data">
 	<div id="box">
-		<table>
+		<table class="table table-striped">
 			<tr>
 				<th>제목</th>
 				<td><input name="free_title"></td>
@@ -58,12 +73,12 @@
 			</tr>
 			<tr>
 				<th>내용</th>
-				<td><textarea name="free_content"></textarea></td>
+				<td><textarea id="content" name="free_content"></textarea></td>
 			</tr>
 			<tr>
-				<td>
-					<input type="button" value="등록하기" onclick="send(this.form);">
-					<input type="button" value="목록보기" onclick="location.href='list.do';">
+				<td style="text-align: center" colspan="2">
+					<input style="text-align: center" type="button" class="btn btn-secondary" value="등록하기" onclick="send(this.form);">
+					<input style="text-align: center" type="button" class="btn btn-dark" value="목록보기" onclick="location.href='list.do';">
 				</td>
 			</tr>
 		</table>

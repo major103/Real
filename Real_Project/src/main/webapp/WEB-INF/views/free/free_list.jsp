@@ -9,22 +9,29 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<!-- Bootstrap 3.x -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-<div id="free_list">
 <table>
-<input type="button" value="글쓰기" onclick="location.href='insert_form.do';">
-	<tr>
-		<th>글번호</th>
-		<th>제목</th>
-		<th>작성자</th>
-		<th>등록일</th>
-		<th>첨부파일</th>
-		<th>조회수</th>
-	</tr>
-	
+
+<div>
+	<button type="button" class="btn btn-dark" onclick="location.href='insert_form.do';">글쓰기</button>
+</div>
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th>글번호</th>
+			<th>제목</th>
+			<th>작성자</th>
+			<th>등록일</th>
+			<th>첨부파일</th>
+			<th>조회수</th>
+		</tr>
+	</thead>
 	<!-- 글이 없는 경우 -->
 	<c:if test="${ empty list }">
 		<tr>
@@ -32,6 +39,7 @@
 		</tr>
 	</c:if>
 	
+	<tbody>
 	<!-- for(FreeVo vo : list)  -->
 	<c:forEach var="vo"  items="${ list }">
 		<tr align="center">
@@ -43,6 +51,9 @@
 			<td>${ vo.free_count }</td>
 		</tr>
 	</c:forEach>
+	</tbody>
+	</table>
+
 </table>
 </div>
 </body>
