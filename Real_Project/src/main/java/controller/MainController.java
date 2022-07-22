@@ -13,4 +13,10 @@ public class MainController {
 		return "main/sub/list";
 	}
 	
+	@RequestMapping("news.do")
+	public String news() {
+		
+		return "news/list";
+	}
+	
 }
