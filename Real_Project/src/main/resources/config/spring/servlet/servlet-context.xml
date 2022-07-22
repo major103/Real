@@ -33,6 +33,27 @@
 		<beans:property name="admin_service" ref="admin_service"></beans:property>
 	</beans:bean>
 	
+	<beans:bean class="controller.MainController">
+		
+	</beans:bean>
+	
+	
+	
+	<beans:bean class="controller.FreeController">
+		<beans:property name="free_dao" ref="free_dao"></beans:property>
+	</beans:bean>
+	
+	
+	<beans:bean class="controller.GradeController">
+		<beans:property name="grade_dao" ref="grade_dao"></beans:property>
+	</beans:bean>
+	
+	
+	<beans:bean class="controller.UserController">
+		<beans:property name="user_dao" ref="user_dao"></beans:property>
+	</beans:bean>
+	
+	
 	
 	
 	

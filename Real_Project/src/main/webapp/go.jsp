@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 
-location.href="admin/user_list.do"
+location.href="main.do"
 
 </script>
 

@@ -18,6 +18,9 @@
 		
 		<!-- Header Include -->
 			<%@include file="../index/header/header.jsp" %>
+			
+			<!-- Main Include -->
+			<%@include file="../index/main/main.jsp" %>
 
 		<!-- Footer Include -->
 			<%@include file="../index/footer/footer.jsp" %>
