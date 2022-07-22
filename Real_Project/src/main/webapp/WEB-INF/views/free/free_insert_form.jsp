@@ -63,7 +63,7 @@
 			<tr>
 				<td>
 					<input type="button" value="등록하기" onclick="send(this.form);">
-					<input type="button" value="목록보기" onclick="location.href='free_list.jsp';">
+					<input type="button" value="목록보기" onclick="location.href='list.do';">
 				</td>
 			</tr>
 		</table>

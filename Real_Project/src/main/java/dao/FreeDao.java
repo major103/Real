@@ -1,17 +1,18 @@
 package dao;
 
 import java.util.List;
+import java.util.Map;
 
 import vo.FreeVo;
 
 public interface FreeDao {
-
-	List<FreeVo> list();
-
-	int insert(FreeVo vo) throws Exception;
 	
-	int update(FreeVo vo) throws Exception;
+	List<FreeVo>	list();
+	FreeVo			selectOne(int free_index);
 	
-	int delete(int idx) throws Exception;
+	int				insert(FreeVo vo);
+	int				delete(int free_index);
+	int				update(FreeVo vo);
 	
+	int				update_count(int free_index);
 }

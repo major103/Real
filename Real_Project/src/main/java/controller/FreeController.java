@@ -51,7 +51,7 @@ public class FreeController {
 	}
 	
 	@RequestMapping("delete.do")
-	public String delete(int free_index) throws Exception {
+	public String delete(int free_index) {
 		
 		int res = free_dao.delete(free_index);
 		

@@ -6,10 +6,10 @@ import org.apache.ibatis.session.SqlSession;
 
 import vo.GradeVo;
 
-public class GradeDaoImpl implements GradeDao{
+public class GradeDaoImpl implements GradeDao {
 
 	SqlSession sqlSession;
-
+	
 	public void setSqlSession(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;
 	}
@@ -21,22 +21,27 @@ public class GradeDaoImpl implements GradeDao{
 	}
 
 	@Override
-	public int insert(GradeVo vo) throws Exception {
+	public GradeVo selectOne(int g_index) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.selectOne("grade.grade_one", g_index);
 	}
 
 	@Override
-	public int update(GradeVo vo) throws Exception {
+	public int insert(GradeVo vo) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.insert("grade.grade_insert", vo);
 	}
 
 	@Override
-	public int delete(int idx) throws Exception {
+	public int delete(int g_index) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.delete("grade.grade_delete", g_index);
 	}
-	
+
+	@Override
+	public int update(GradeVo vo) {
+		// TODO Auto-generated method stub
+		return sqlSession.update("grade.grade_update", vo);
+	}
 
 }
