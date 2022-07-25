@@ -11,7 +11,7 @@
 <link rel="stylesheet" 
 	href="${ pageContext.request.contextPath }/resources/css/font.css">
 <link rel="stylesheet" 
-      href="${ pageContext.request.contextPath }/resources/plug/slick/slick.css">
+      href="${ pageContext.request.contextPath }/resources/plug/slick/slick.css"> 
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/news.css">
 
 </head>
