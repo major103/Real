@@ -26,7 +26,7 @@
 	<div id="box">
 			<table>
 				<tr>
-					<td align="center"><img src="../img/돋보기.png" height="50px"></td>
+					<td align="center"><img src="${ pageContext.request.contextPath }/resources/images/user/돋보기.png" height="50px"></td>
 					<th style="font-size: 25px">아이디 찾기</th>
 				</tr>
 			</table>
