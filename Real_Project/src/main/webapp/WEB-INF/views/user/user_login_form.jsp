@@ -83,7 +83,7 @@
 		/* var left = w_width/2 - 400/2;
 		var top = w_height/2 - 500/2; */
 		
-		var url = "id_find.jsp";
+		var url = "id_find.do";
 		var name = "아이디 찾기"
 		window.open(url, name, "width=450, height=500, left=750, top=180");
 	}
@@ -97,7 +97,7 @@
 		/* var left = w_width/2 - 400/2;
 		var top = w_height/2 - 500/2; */
 		
-		var url = "pwd_find.jsp";
+		var url = "pwd_find.do";
 		var name = "비밀번호 찾기"
 		window.open(url, name, "width=450, height=500, left=750, top=180");
 	}

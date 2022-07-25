@@ -14,11 +14,13 @@
 				<ul>
 					<!-- 오른쪽 위 -->
 					<c:if test="${ empty user }">
-					<li><a href="/sub/login.html"><span>로그인</span></a></li>
+					<li><a href="user/login_form.do"><span>로그인</span></a></li>
 					</c:if>
 					<c:if test="${ not empty user }">
-					<li><a href="/sub/login.html"><span>로그아웃</span></a></li>
+					<li><a href="/user/logout.do"><span>로그아웃</span></a></li>
 					</c:if>
+					
+					
 					
 					<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
 						<div class="pc_toplink_menu" style="display: none;">
@@ -79,14 +81,14 @@
 						<li><a href="/sub/list.html?ttl=NEWS"><span>매장검색</span></a></li>
 						<li><a href="news.do"><span>뉴스</span></a></li>
 						<li><a href="/sub/list.html?ttl=COLUMN"><span>브랜드검색</span></a></li>
-						<li class="top_menu"><a href="javascript:void(0)"><span>게시판</span></a>
+						<li class="top_menu"><a href="free.do"><span>게시판</span></a>
 							<div class="pc_toplink_menu" style="display: none;">
 								<p>
 									<a href="news.do"
 										target="_blank">뉴스</a>
 								</p>
 								<p>
-									<a href="http://imagazinekorea.com/etc/notice.asp"
+									<a href=""
 										target="_blank">자유게시판</a>
 								</p>
 								<p>

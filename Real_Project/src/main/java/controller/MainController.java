@@ -19,4 +19,10 @@ public class MainController {
 		return "news/list";
 	}
 	
+	@RequestMapping("free.do")
+	public String free() {
+		
+		return "free/free_list";
+	}
+	
 }
