@@ -62,7 +62,7 @@ public class UserController {
 			//Session Tracking
 			//response.sendRedirect("login_form.do?reason=fail_id");
 			
-			//modelÀ» ÅëÇØ¼­ DS·Î Àü´ÞµÈµ¥ÀÌÅÍ´Â redirect½Ã¿¡´Â parameter·Î Ã³¸® 
+			//modelï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ DSï¿½ï¿½ ï¿½ï¿½ï¿½ÞµÈµï¿½ï¿½ï¿½ï¿½Í´ï¿½ redirectï¿½Ã¿ï¿½ï¿½ï¿½ parameterï¿½ï¿½ Ã³ï¿½ï¿½ 
 			model.addAttribute("reason", "fail_id");
 			return "redirect:login_form.do";
 		}
@@ -76,16 +76,16 @@ public class UserController {
 			return "redirect:login_form.do";
 		}
 			
-		//·Î±×ÀÎÁ¤º¸ ¼¼¼Ç¿¡ ³Ö±â
+		//ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½Ö±ï¿½
 		session.setAttribute("user", user);	
 		
-		//¸ÞÀÎÆäÀÌÁö ÀÌµ¿(URL)
-		//ÇöÀç°æ·Î :             /member/login.do
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½(URL)
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :             /member/login.do
 		if(url.equals("no_url")) {		
 		   return "redirect:../board/list.do";
 		}
 		
-		//urlÀÌ ÀÖÀ¸¸é ÇØ´ç url·Î ÀÌµ¿ÇØ¶ó..
+		//urlï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ urlï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¶ï¿½..
 		return "redirect:" + url;
 	}
 	
@@ -95,10 +95,24 @@ public class UserController {
 		return "user/user_login_form";
 	}
 	
+	@RequestMapping("insert_form.do")
+	public String insert_form() {
+		
+		return "user/user_insert_form";
+	}
+	
+	@RequestMapping("insert.do")
+	public String insert(UserVo vo) {
+		
+		int res = user_dao.insert(vo);
+		
+		return "redirect:login_form.do";
+	}
+	
 	@RequestMapping("logout.do")
 	public String logout() {
 		
-		//¼¼¼Ç¿¡ userÁ¤º¸¸¦ »èÁ¦
+		//ï¿½ï¿½ï¿½Ç¿ï¿½ userï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		session.removeAttribute("user");
 				
 		return "redirect:../list.do";
@@ -165,10 +179,6 @@ public class UserController {
 		
 		return "user/pwd_find_result";
 	}
-	
-	
-		
-	
 	
 	
 	

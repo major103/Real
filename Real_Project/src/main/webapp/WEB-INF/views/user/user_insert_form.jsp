@@ -69,9 +69,10 @@
 	});
 	
 	function send(f) {
-		//입력값 체크(이름/비번/우편번호/주소)
+		//입력값 체크(이름/비번)
 		var u_name = f.u_name.value.trim();
 		var u_pwd = f.u_pwd.value.trim();
+		var u_email = f.u_email.value.trim();
 		
 		if(u_name==''){
 			alert('이름을 입력하세요');
@@ -87,7 +88,7 @@
 			return;
 		}
 		
-		f.action = "insert.do";
+		f.action = "insert.do?u_email=" + encodeURIComponent(u_email);
 		f.submit();
 	}
 	
@@ -101,10 +102,6 @@
       		<div class="panel-heading"><h4>회원가입</h4></div>
       		<div class="panel-body">
       			<table class="table table-striped">
-      				<tr>
-      					<th>이름</th>
-      					<td><input name="u_name"></td>
-      				</tr>
       				
       				<tr>
       					<th>아이디</th>
@@ -112,7 +109,6 @@
 	      					<input name="u_id" id="u_id">
 	      					<span id="id_msg"></span>
       					</td>
-      					
       				</tr>
       				
       				<tr>
@@ -121,16 +117,21 @@
       				</tr>
       				
       				<tr>
+      					<th>이름</th>
+      					<td><input name="u_name"></td>
+      				</tr>
+      				
+      				<tr>
       					<th>성별</th>
       					<td>
-      						<input type="radio" name="gender" value="남자">남자 
-      						<input type="radio" name="gender" value="여자">여자
+      						<input type="radio" name="u_gender" value="남자">남자 
+      						<input type="radio" name="u_gender" value="여자">여자
       					</td>
       				</tr>
       				
       				<tr>
       					<th>생년월일</th>
-      					<td><input type=""></td>
+      					<td><input name="u_birth"></td>
       				</tr>
       				
       				<tr>
