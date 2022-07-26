@@ -20,6 +20,9 @@
 
 
 <script type="text/javascript">
+
+
+
 	function emailCheck(f) {
 		if(f.email.value==0){
 			f.p_email_b.value = "";
@@ -32,16 +35,21 @@
 	}
 	
 	var regular_phone = /^[0-9]{4}$/;
+	
+	
+	
+	
+	
 	function phone_find(f) {
 		
-		var name = f.name.value.trim();
+		var u_name = f.u_name.value.trim();
 		var phone_center = f.phone_center.value;
 		var phone_end = f.phone_end.value;
 		
-		if(name == ''){
-			alert('이름을 입력하세요');
-			f.name.value = '';
-			f.name.focus();
+		if(u_name == ''){
+			/*alert('이름을 입력하세요');
+			f.u_name.value = '';
+			f.u_name.focus();*/
 			return;
 		}
 		if(regular_phone.test(phone_center) == false){
@@ -60,15 +68,19 @@
 		f.submit();
 	}
 	
+	
+	
+	
+	
 	function email_find(f) {
-		var name1 = f.name1.value.trim();
+		var u_name = f.u_name.value.trim();
 		var p_email_f = f.p_email_f.value.trim();
 		var p_email_b = f.p_email_b.value.trim();
 		
-		if(name1 == ''){
+		if(u_name == ''){
 			alert('이름을 입력하세요');
-			f.name1.value = '';
-			f.name1.focus();
+			f.u_name.value = '';
+			f.u_name.focus();
 			return;
 		}
 		if(p_email_f == ''){
@@ -87,6 +99,10 @@
 		f.action = "id_find_email.jsp";
 		f.submit();
 	}
+	
+	
+	
+	
 </script>
 </head>
 <body>
@@ -107,7 +123,7 @@
 			<table id="id_find">	
 				<tr>
 					<td>이 름</td>
-					<td><input type="text" name="name" style="width: 120px"></td>
+					<td><input type="text" name="u_name" style="width: 120px"></td>
 				</tr>
 				<tr>
 					<td>휴대전화</td>
@@ -139,7 +155,7 @@
 			<table id="id_find">	
 				<tr>
 					<td>이 름</td>
-					<td><input type="text" name="name1" style="width: 120px"></td>
+					<td><input type="text" name="u_name" style="width: 120px"></td>
 				</tr>
 				<tr>
 					<td>이메일</td>

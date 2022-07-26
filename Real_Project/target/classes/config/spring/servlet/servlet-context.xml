@@ -27,12 +27,11 @@
 	<context:annotation-config/>
 	<!-- 수동생성 -->
 	
+	<!-- Socket(Chatting) Controller -->
+	<beans:bean class="controller.ChattingController"></beans:bean>
+	
 	<!-- main -->
-	<beans:bean class="controller.MainController">
-		
-	</beans:bean>
-	
-	
+	<beans:bean class="controller.MainController"></beans:bean>
 	
 	<!-- Admin service -->
 	<beans:bean class="controller.AdminController">
