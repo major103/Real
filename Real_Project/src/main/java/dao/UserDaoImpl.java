@@ -48,13 +48,13 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public List<UserVo> list() {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectList("user.user_list");
 	}
 
 	@Override
 	public int insert(UserVo vo) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.insert("user.user_insert", vo);
 	}
 
 }

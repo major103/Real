@@ -30,6 +30,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	update user_info set u_pwd=#{new_pwd}
 </update>
 
+<insert id="user_insert" parameterType="vo.UserVo">
+	insert into user values(seq_user_u_index.nextVal,
+							#{ u_id },
+							#{ u_pwd },
+							#{ u_name },
+							#{ u_gender },
+							#{ u_birth },
+							#{ u_phone },
+							#{ u_email},
+							default,
+							sysdate,
+							default,
+							sysdate
+							)
+	
+</insert>
+
 </mapper>
 
 

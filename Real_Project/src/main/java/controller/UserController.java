@@ -95,6 +95,20 @@ public class UserController {
 		return "user/user_login_form";
 	}
 	
+	@RequestMapping("insert_form.do")
+	public String insert_form() {
+		
+		return "user/user_insert_form";
+	}
+	
+	@RequestMapping("insert.do")
+	public String insert(UserVo vo) {
+		
+		int res = user_dao.insert(vo);
+		
+		return "redirect:login_form.do";
+	}
+	
 	@RequestMapping("logout.do")
 	public String logout() {
 		
@@ -165,10 +179,6 @@ public class UserController {
 		
 		return "user/pwd_find_result";
 	}
-	
-	
-		
-	
 	
 	
 	

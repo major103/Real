@@ -58,7 +58,7 @@
 		<div id="box">
 			<table>
 				<tr>
-					<td align="center"><img src="../img/find.png" height="50px"></td>
+					<td align="center"><img src="${ pageContext.request.contextPath }/resources/images/user/find.png" height="50px"></td>
 					<td>비밀번호 찾기</td>
 				</tr>
 			</table>
