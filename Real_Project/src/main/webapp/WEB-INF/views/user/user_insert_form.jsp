@@ -98,7 +98,7 @@
 <body>
 <form>
 	<div id="box">
-		<div class="panel panel-primary">
+		<div class="panel panel-default">
       		<div class="panel-heading"><h4>회원가입</h4></div>
       		<div class="panel-body">
       			<table class="table table-striped">
@@ -135,9 +135,22 @@
       				</tr>
       				
       				<tr>
-      					<th>전화번호</th>
-      					<td><input name="u_phone"></td>
-      				</tr>
+      					<th>휴대전화</th>
+					<td>
+						<select name="phone_front" >
+							<option value="010" selected="selected">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+						</select>
+						-
+						<input type="text" name="phone_center" maxlength="4" style="width: 60px">
+						-
+						<input type="text" name="phone_end" maxlength="4" style="width: 60px">
+					</td>
+				</tr>
       				
       				<tr>
       					<th>이메일</th>
@@ -149,8 +162,8 @@
       					<td colspan="2" align="center">
       						<input class="btn btn-primary" type="button" value="가입하기" id="btn_register"
       							   onclick="send(this.form);">
-      						<input class="btn btn-success" type="button" value="목록보기"
-      							   onclick="location.href='list.do'">
+      						<input class="btn btn-default" type="button" value="취소"
+      							   onclick="location.href='login_form.do'">
       					</td>
       				</tr>
       			</table>

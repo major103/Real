@@ -102,7 +102,11 @@ public class UserController {
 	}
 	
 	@RequestMapping("insert.do")
-	public String insert(UserVo vo) {
+	public String insert(UserVo vo, String phone_front, String phone_center, String phone_end) {
+		
+		String u_phone = phone_front + "-" + phone_center + "-" + phone_end;
+		
+		vo.setU_phone(u_phone);
 		
 		int res = user_dao.insert(vo);
 		
@@ -179,6 +183,10 @@ public class UserController {
 		
 		return "user/pwd_find_result";
 	}
+	
+	
+		
+	
 	
 	
 	

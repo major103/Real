@@ -2,9 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ict</groupId>
-	<artifactId>aop</artifactId>
-	<name>2022_0706_SpringAOP</name>
+	<groupId>com.oscar</groupId>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -217,6 +215,22 @@
 		</dependency>
 		
 		
+		
+		<!-- 웹소켓 라이브러리 -->
+				<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>5.0.0.RELEASE</version> 
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.websocket/javax.websocket-api -->
+		<dependency>
+			<groupId>javax.websocket</groupId>
+			<artifactId>javax.websocket-api</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope>
+		</dependency>
+		
 	</dependencies>
     <build>
         <plugins>
@@ -256,4 +270,6 @@
             </plugin>
         </plugins>
     </build>
+    <artifactId>setting</artifactId>
+    <name>Real_Project</name>
 </project>

@@ -84,7 +84,7 @@
 			return;
 		}
 		
-		f.action = "id_find_email.jsp";
+		f.action = "id_find_email.do";
 		f.submit();
 	}
 </script>

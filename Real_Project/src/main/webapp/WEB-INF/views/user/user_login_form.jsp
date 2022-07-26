@@ -107,7 +107,7 @@
 <body>
 	<form>
 		<div id="box">
-			<div class="panel panel-danger">
+			<div class="panel panel-default">
       		<div class="panel-heading">로그인</div>
       		<div class="panel-body">
       			<table class="table table-striped">
@@ -127,7 +127,7 @@
 		      		<br>
 		      		<tr>
 		      			<td align="center" colspan="3">
-		      				<input class="btn btn-primary" type="button" value="로그인" onclick="send(this.form);">
+		      				<input class="btn btn-default" type="button" value="로그인" onclick="send(this.form);">
 		      			</td>
 		      		</tr>
 		      		<tr align="center">
