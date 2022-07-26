@@ -62,7 +62,7 @@ public class UserController {
 			//Session Tracking
 			//response.sendRedirect("login_form.do?reason=fail_id");
 			
-			//modelï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ DSï¿½ï¿½ ï¿½ï¿½ï¿½ÞµÈµï¿½ï¿½ï¿½ï¿½Í´ï¿½ redirectï¿½Ã¿ï¿½ï¿½ï¿½ parameterï¿½ï¿½ Ã³ï¿½ï¿½ 
+			//modelÀ» ÅëÇØ¼­ DS·Î Àü´ÞµÈµ¥ÀÌÅÍ´Â redirect½Ã¿¡´Â parameter·Î Ã³¸® 
 			model.addAttribute("reason", "fail_id");
 			return "redirect:login_form.do";
 		}
@@ -76,16 +76,16 @@ public class UserController {
 			return "redirect:login_form.do";
 		}
 			
-		//ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½Ö±ï¿½
+		//·Î±×ÀÎÁ¤º¸ ¼¼¼Ç¿¡ ³Ö±â
 		session.setAttribute("user", user);	
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½(URL)
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :             /member/login.do
+		//¸ÞÀÎÆäÀÌÁö ÀÌµ¿(URL)
+		//ÇöÀç°æ·Î :             /member/login.do
 		if(url.equals("no_url")) {		
 		   return "redirect:../board/list.do";
 		}
 		
-		//urlï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ urlï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ø¶ï¿½..
+		//urlÀÌ ÀÖÀ¸¸é ÇØ´ç url·Î ÀÌµ¿ÇØ¶ó..
 		return "redirect:" + url;
 	}
 	
@@ -95,37 +95,23 @@ public class UserController {
 		return "user/user_login_form";
 	}
 	
-	@RequestMapping("insert_form.do")
-	public String insert_form() {
-		
-		return "user/user_insert_form";
-	}
-	
-	@RequestMapping("insert.do")
-	public String insert(UserVo vo) {
-		
-		int res = user_dao.insert(vo);
-		
-		return "redirect:login_form.do";
-	}
-	
 	@RequestMapping("logout.do")
 	public String logout() {
 		
-		//ï¿½ï¿½ï¿½Ç¿ï¿½ userï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		//¼¼¼Ç¿¡ userÁ¤º¸¸¦ »èÁ¦
 		session.removeAttribute("user");
 				
 		return "redirect:../list.do";
 	}
 	
 	@RequestMapping("id_find_phone.do")
-	public String id_find_phone(String u_name, String phone_front, String phone_center, String phone_end, HttpServletRequest request) {
+	public String id_find_phone(String name, String phone_front, String phone_center, String phone_end, HttpServletRequest request) {
 		
 		String u_phone = phone_front + "-" + phone_center + "-" + phone_end;
 		
 		Map map = new HashMap();
 		
-		map.put("u_name", u_name);
+		map.put("name", name);
 		map.put("u_phone", u_phone);
 		
 		UserVo user = user_dao.selectOne1(map);
@@ -136,13 +122,13 @@ public class UserController {
 	}
 	
 	@RequestMapping("id_find_email.do")
-	public String id_find_email(String u_name, String p_email_f, String p_email_b, HttpServletRequest request) {
+	public String id_find_email(String name1, String p_email_f, String p_email_b, HttpServletRequest request) {
 		
 		String u_email = p_email_f + "@" + p_email_b;
 		
 		Map map = new HashMap();
 		
-		map.put("u_name", u_name);
+		map.put("name1", name1);
 		map.put("u_email", u_email);
 		
 		UserVo user = user_dao.selectOne2(map);
@@ -153,14 +139,14 @@ public class UserController {
 	}
 	
 	@RequestMapping("pwd_find_process.do")
-	public String pwd_find_process(String id, String u_name, String phone_front, String phone_center, String phone_end, HttpServletRequest request) {
+	public String pwd_find_process(String id, String name, String phone_front, String phone_center, String phone_end, HttpServletRequest request) {
 		
 		String u_phone = phone_front + "-" + phone_center + "-" + phone_end;
 		
 		Map map = new HashMap();
 		
 		map.put("id", id);
-		map.put("u_name", u_name);
+		map.put("name", name);
 		map.put("u_phone", u_phone);	
 		
 		UserVo user = user_dao.selectOne3(map);
@@ -179,6 +165,10 @@ public class UserController {
 		
 		return "user/pwd_find_result";
 	}
+	
+	
+		
+	
 	
 	
 	

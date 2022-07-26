@@ -134,7 +134,7 @@
 		      			<td>
 		      				<a href="javascript:pwd_popup()">비밀번호 찾기 </a>|
 		      				<a href="javascript:id_popup()"> 아이디 찾기 </a>|
-		      				<a href="insert_form.do"> 회원가입</a>
+		      				<a href="user_insert_form.jsp"> 회원가입</a>
 		      			</td>
 		
 		      		</tr>
