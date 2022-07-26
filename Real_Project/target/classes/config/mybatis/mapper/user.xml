@@ -23,29 +23,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </select>
 
 <select id="user_one_pwd" parameterType="java.util.Map" resultType="vo.UserVo">
-	select * from user_info where u_id=#{ u_id } and u_name=#{ u_name } and u_phone=#{ u_phone } 
+	select * from user_info where u_id=#{ id } and u_name=#{ name } and u_phone=#{ u_phone } 
 </select>
 
 <update id="user_pwd_find" parameterType="String">
 	update user_info set u_pwd=#{new_pwd}
 </update>
-
-<insert id="user_insert" parameterType="vo.UserVo">
-	insert into user values(seq_user_u_index.nextVal,
-							#{ u_id },
-							#{ u_pwd },
-							#{ u_name },
-							#{ u_gender },
-							#{ u_birth },
-							#{ u_phone },
-							#{ u_email},
-							default,
-							sysdate,
-							default,
-							sysdate
-							)
-	
-</insert>
 
 </mapper>
 
