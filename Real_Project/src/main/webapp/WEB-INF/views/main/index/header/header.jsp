@@ -30,7 +30,7 @@
 						</li>
 					</c:if>
 					<c:if test="${ not empty user }">
-						<li><a href="/user/logout.do"><span>로그아웃</span></a></li>
+						<li><a href="user/logout.do"><span>로그아웃</span></a></li>
 					</c:if>
 					
 					
