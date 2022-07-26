@@ -14,40 +14,27 @@
 				<ul>
 					<!-- 오른쪽 위 -->
 					<c:if test="${ empty user }">
-					<li><a href="user/login_form.do"><span>로그인</span></a></li>
+						<li><a href="user/login_form.do"><span>로그인</span></a></li>
+						<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
+							<div class="pc_toplink_menu" style="display: none;">
+								<p>
+									<a href="">개인정보</a>
+								</p>
+								<p>
+									<a href="">개인정보</a>
+								</p>
+								<p>
+									<a href="">QnA</a>
+								</p>
+							</div>
+						</li>
 					</c:if>
 					<c:if test="${ not empty user }">
-					<li><a href="/user/logout.do"><span>로그아웃</span></a></li>
+						<li><a href="/user/logout.do"><span>로그아웃</span></a></li>
 					</c:if>
 					
 					
 					
-					<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
-						<div class="pc_toplink_menu" style="display: none;">
-							<p>
-								<a href="http://imagazinekorea.com/etc/online_ad.asp"
-									target="_blank">북마크</a>
-							</p>
-							<p>
-								<a href="http://imagazinekorea.com/etc/notice.asp"
-									target="_blank">개인정보</a>
-							</p>
-							<p>
-								<a href="http://www.kayamedia.com/" target="_blank">QnA</a>
-							</p>
-						</div></li>
-				
-					<li>
-						<!-- 오른쪽 위 돋보기 검색기능 -->
-						<div class="search">
-							<div class="left">
-								<input name="textValue" id="textValue" type="search"
-									placeholder="search" onkeydown="javascript: onkeyDown2();">
-							</div>
-							<img class="btn" src="${ pageContext.request.contextPath }/resources/images/main/header/icon_s.png"
-								onclick="javascript: btnClick()">
-						</div>
-					</li>
 				</ul>
 			</div>
 			<div class="bottom">
@@ -55,48 +42,29 @@
 				<a class="logo" href="main.do"><img
 					src="${ pageContext.request.contextPath }/resources/images/main/header/오스카_소.png"></a>
 				<div class="gnb">
-					<div class="menu">
-						<div class="wrap">
-							<div class="on">
-								<span></span><span></span><span></span>
-							</div>
-							<div class="off">
-								<img src="${ pageContext.request.contextPath }/resources/images/main/header/m_close.png">
-							</div>
-						</div>
-					</div>
-					<div class="search">
-						<img src="${ pageContext.request.contextPath }/resources/images/main/header/m_search.png">
-						<div class="right">
-							<input id="mText" name="" type="text" placeholder="search"
-								onkeydown="javascript: onkeyDown3();">
-							<div class="close">
-								<img src="${ pageContext.request.contextPath }/resources/images/main/header/m_close.png"
-									onclick="javascript: clearText()">
-							</div>
-						</div>
-					</div>
 					<ul>
-						<li><a href="/sub/list.html?ttl=NEWCAR"><span>견적내기</span></a></li>
-						<li><a href="/sub/list.html?ttl=NEWS"><span>매장검색</span></a></li>
-						<li><a href="news.do"><span>뉴스</span></a></li>
-						<li><a href="/sub/list.html?ttl=COLUMN"><span>브랜드검색</span></a></li>
-						<li class="top_menu"><a href="free.do"><span>게시판</span></a>
+						<li><a href="news.do"><span>NEWS</span></a></li>
+						<li><a href=""><span>자동차백과</span></a></li>
+						<li><a href="estimate.do"><span>견적내기</span></a>
 							<div class="pc_toplink_menu" style="display: none;">
 								<p>
-									<a href="news.do"
-										target="_blank">뉴스</a>
+									<a href="">간단견적</a>
 								</p>
 								<p>
-									<a href=""
-										target="_blank">자유게시판</a>
+									<a href="">차량비교</a>
+								</p>
+							</div></li>
+						<li><a href=""><span>매장검색</span></a></li>
+						<li class="top_menu"><a href="javascript:void(0)"><span>게시판</span></a>
+							<div class="pc_toplink_menu" style="display: none;">
+								<p>
+									<a href="free.do">자유게시판</a>
 								</p>
 								<p>
-									<a href="http://imagazinekorea.com/etc/notice.asp"
-										target="_blank">토론게시판</a>
+									<a href="">오픈채팅</a>
 								</p>
 								<p>
-									<a href="http://www.kayamedia.com/" target="_blank">후기 및 평점</a>
+									<a href="">평점 및 후기</a>
 								</p>
 							</div>
 						</li>
@@ -104,14 +72,10 @@
 						<li class="side_link">
 							<ul>
 								<li><a href="/sub/login.html"><span>로그인</span></a></li>
-								<li><a
-									href="http://m.imagazinekorea.com/member/subscribe.asp"
-									target="_blank"><span>정기구독</span></a></li>
-								<li><a href="http://m.imagazinekorea.com/etc/online_ad.asp"
-									target="_blank"><span>광고/제휴</span></a></li>
-								<li><a href="http://m.imagazinekorea.com/etc/notice.asp"
-									target="_blank"><span>고객센터</span></a></li>
-								<li><a href="http://www.kayamedia.com/" target="_blank"><span>회사소개</span></a></li>
+								<li><a href=""><span>정기구독</span></a></li>
+								<li><a href=""><span>광고/제휴</span></a></li>
+								<li><a href=""><span>고객센터</span></a></li>
+								<li><a href=""><span>회사소개</span></a></li>
 							</ul>
 						</li>
 						
@@ -119,46 +83,6 @@
 				</div>
 			</div>
 		</header>
-<!-- 		<script> -->
-<!--  			function btnClick() { -->
-<!--  				location.href = "/sub/search.html?textValue=" -->
-<!--  						+ $('#textValue').val(); -->
-<!--  			} -->
-<!--  			function onkeyDown2() { -->
-<!--  				if (event.keyCode == 13) { -->
-<!--  					location.href = "/sub/search.html?textValue=" -->
-<!--  							+ $('#textValue').val(); -->
-<!--  				} -->
-<!--  			} -->
-<!--  			function onkeyDown3() { -->
-<!--  				if (event.keyCode == 13) { -->
-<!--  					location.href = "/sub/search.html?textValue=" -->
-<!--  							+ $('#mText').val(); -->
-<!--  				} -->
-<!--  			} -->
-<!--  			function clearText() { -->
-<!--  				$("#mText").val(""); -->
-<!--  			} -->
-
-<!--  			function menuImage(img, mode) { -->
-<!--  				if (mode == "Y") -->
-<!--  					img.src = "/images/common/ElectriCar_navi_pc_r.png"; -->
-<!--  				else -->
-<!--  					img.src = "/images/common/ElectriCar_navi_pc_n.png"; -->
-<!--  			} -->
-
-<!--  			function menuImage_mobile(img, mode) { -->
-<!--  				if (mode == "Y") -->
-<!--  					img.src = "/images/common/ElectriCar_navi_m_r.png"; -->
-<!--  				else -->
-<!--  					img.src = "/images/common/ElectriCar_navi_m_n.png"; -->
-<!--  			} -->
-<!-- 		</script> -->
-
-		<!-- tdn:s -->
-<!-- 		<script src="//ads.tapzin.com/imagazine/motortrend/tdn.js"></script> -->
-		<!-- tdn:e -->
-		<!-- header:e -->
 		
 </body>
 </html>
