@@ -70,6 +70,8 @@
  	--조회
  	select * from user_info
  	
+ 	delete from user_info where u_name='최지영'
+ 	
  	update user_info set u_name='임현빈' where u_index=1
  	
  
