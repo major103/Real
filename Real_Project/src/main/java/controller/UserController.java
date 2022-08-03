@@ -52,7 +52,7 @@ public class UserController {
 	
 	@RequestMapping("login.do")
 	public String login(String u_id, String u_pwd,
-						@RequestParam(value="url", required=false, defaultValue="no url")String url,
+						@RequestParam(value="url", required=false, defaultValue="no_url")String url,
 						Model model) {
 		
 		UserVo user = user_dao.selectOne(u_id);
@@ -82,7 +82,7 @@ public class UserController {
 		//���������� �̵�(URL)
 		//������ :             /member/login.do
 		if(url.equals("no_url")) {		
-		   return "redirect:../board/list.do";
+		   return "redirect:../main.do";
 		}
 		
 		//url�� ������ �ش� url�� �̵��ض�..
@@ -119,7 +119,7 @@ public class UserController {
 		//���ǿ� user������ ����
 		session.removeAttribute("user");
 				
-		return "redirect:../list.do";
+		return "redirect:../main.do";
 	}
 	
 	@RequestMapping("id_find_phone.do")
@@ -184,10 +184,11 @@ public class UserController {
 		return "user/pwd_find_result";
 	}
 	
-	
+	@RequestMapping("mypage.do")
+	public String mypage() {
 		
-	
-	
+		return "user/mypage";
+	}
 	
 	
 }
