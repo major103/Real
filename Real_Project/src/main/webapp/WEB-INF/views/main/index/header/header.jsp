@@ -91,12 +91,11 @@
 					<!-- 오른쪽 위 -->
 					<c:if test="${ empty user }">
 						<li><a href="user/login_form.do"><span>로그인</span></a></li>
-						<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
-							
-						</li>
+						
 					</c:if>
 					<c:if test="${ not empty user }">
 						<li><a href="user/logout.do"><span>로그아웃</span></a></li>
+						<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a></li>
 					</c:if>
 					
 					
