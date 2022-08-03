@@ -1,17 +1,26 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <title>NEWCAR | MOTOR TREND</title>
-<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/basic.css">
+
+
+<link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/basic.css">
+
+
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/style.css">
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/font.css">
-<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/plug/slick/slick.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resoures/plug/slick/slick.css">
+
+<script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/jquery-ui.js"></script>
 <script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/script.js"></script>
 <script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/clipboard.js"></script>
-<script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/jquery-ui.js"></script>
-<script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/jquery-1.11.1.min.js"></script>
+
+
 </head>
 <body>
 
@@ -20,13 +29,13 @@
 		
 		
 		<!-- Header Include -->
-			<%@include file="../index/header/header.jsp" %>
+			<%@include file="index/header/header.jsp" %>
 			
 			<!-- Main Include -->
-			<%@include file="../index/main/main.jsp" %>
+			<%@include file="index/main/main.jsp" %>
 
 		<!-- Footer Include -->
-			<%@include file="../index/footer/footer.jsp" %>
+			<%@include file="index/footer/footer.jsp" %>
 	
 
 

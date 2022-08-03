@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 
 	
-	@RequestMapping("main.do")
+	@RequestMapping("/main.do")
 	public String main() {
 		
-		return "main/sub/list";
+		return "main/list";
 	}
 	
-	@RequestMapping("news.do")
+	@RequestMapping("/news.do")
 	public String news() {
 		
 		return "news/list";
 	}
 	
-	@RequestMapping("free.do")
+	@RequestMapping("/free.do")
 	public String free() {
 		
 		return "free/free_list";

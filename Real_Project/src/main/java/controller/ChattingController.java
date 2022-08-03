@@ -14,8 +14,8 @@ import javax.websocket.server.ServerEndpoint;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
-@ServerEndpoint(value = "/socket")
+/*@Controller
+@ServerEndpoint(value = "/socket")*/
 public class ChattingController {
 	
 	private static final List<Session> sessionList = new ArrayList<Session>();

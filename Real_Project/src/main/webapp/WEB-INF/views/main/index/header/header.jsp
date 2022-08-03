@@ -6,6 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style type="text/css">
+
+.board_menu { display: inline-block; }
+.board { display: none; }
+.board a { display: block; }
+.board a:hover {color: black }
+.board_menu: hover .board { display:block; }
+
+</style>
+
 </head>
 <body>
 
@@ -39,8 +50,8 @@
 			</div>
 			<div class="bottom">
 				<!-- 왼쪽 위 큰 로고 -->
-				<a class="logo" href="main.do"><img
-					src="${ pageContext.request.contextPath }/resources/images/main/header/오스카_소.png"></a>
+				<a class="logo" href="main.do">
+				<img src="${ pageContext.request.contextPath }/resources/images/main/header/오스카_소.png"></a>
 				<div class="gnb">
 					<ul>
 						<li><a href="news.do"><span>NEWS</span></a></li>
@@ -55,30 +66,13 @@
 								</p>
 							</div></li>
 						<li><a href=""><span>매장검색</span></a></li>
-						<li class="top_menu"><a href="javascript:void(0)"><span>게시판</span></a>
-							<div class="pc_toplink_menu" style="display: none;">
-								<p>
+						<li class="board_menu"><a href=""><span>게시판</span></a>
+							<div class="board">
 									<a href="free.do">자유게시판</a>
-								</p>
-								<p>
 									<a href="">오픈채팅</a>
-								</p>
-								<p>
 									<a href="">평점 및 후기</a>
-								</p>
 							</div>
-						</li>
-						
-						<li class="side_link">
-							<ul>
-								<li><a href="/sub/login.html"><span>로그인</span></a></li>
-								<li><a href=""><span>정기구독</span></a></li>
-								<li><a href=""><span>광고/제휴</span></a></li>
-								<li><a href=""><span>고객센터</span></a></li>
-								<li><a href=""><span>회사소개</span></a></li>
-							</ul>
-						</li>
-						
+						</li>	
 					</ul>
 				</div>
 			</div>
