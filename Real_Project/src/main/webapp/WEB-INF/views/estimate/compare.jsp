@@ -63,6 +63,10 @@
 	
 </script>
 
+<style type="text/css">
+div, table { margin: auto;}
+table { border:1px solid black; }
+</style>
 
 </head>
 <body>

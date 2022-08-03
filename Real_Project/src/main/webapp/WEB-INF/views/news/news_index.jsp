@@ -61,7 +61,7 @@
 </head>
 <body>
 	<div class="section">
-		<div class="title">최신 뉴스</div>
+		<div class="title"><h3 style="text-align: center;">최신 뉴스</h3></div>
 		<div class="list"></div>
 			<table id="main">
 				<tr bgcolor="#dedede">
@@ -69,7 +69,34 @@
 					<th>제목</th>
 					<th>내용</th>
 				</tr>
-						
+						<%
+							
+							for(i=0; i<11; i++){
+								out.print("<tr>");
+								out.print("<td>");
+								out.print("<a href='");
+								out.print(news_url.get(i));
+								out.print("'>");
+								out.print("<img src='");
+								out.print(news_img.get(i));
+								out.print("'>");
+								out.print("</a");
+								out.print("</td>");
+								
+								out.print("<td>");
+								out.print("<a href='");
+								out.print(news_url.get(i));
+								out.print("'>");
+								out.print(news_title.get(i));
+								out.print("</a");
+								out.print("</td>");
+								
+								out.print("<td>");
+								out.print(news_content.get(i));
+								out.print("</td>");
+							}
+						%>
+	<%-- 			</c:forEach> --%>
 			
 			</table>
 			<div>
