@@ -91,33 +91,10 @@
 </style>
 </head>
 <body>
-
-<header class="header" role="banner">
-  <h1 class="logo">
-    <a href="#">Terence <span>Devine</span></a>
-  </h1>
-  <div class="nav-wrap">
-    <nav class="main-nav" role="navigation">
-      <ul class="unstyled list-hover-slide">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </nav>
-    <ul class="social-links list-inline unstyled list-hover-slide">
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Google+</a></li>
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">CodePen</a></li>
-    </ul>
-  </div>
-</header>
-
-		<div>
+	<form>
 			<div>
 				<button id="btn1" type="button" class="btn btn-dark"
-					onclick="location.href='insert_form.do';">글쓰기</button>
+					onclick="location.href='free/insert_form.do';">글쓰기</button>
 			</div>
 			<div>
 			<table id="tb1" class="table table-striped table-hover">
@@ -161,8 +138,6 @@
 				</select> <input id="search_text" value="${ param.search_text }"> <input
 					type="button" value="검색" onclick="find();">
 			</div>
-
-		</div>
-	</div>
+		</form>
 </body>
 </html>
