@@ -184,10 +184,11 @@ public class UserController {
 		return "user/pwd_find_result";
 	}
 	
-	
+	@RequestMapping("mypage.do")
+	public String mypage() {
 		
-	
-	
+		return "user/mypage";
+	}
 	
 	
 }

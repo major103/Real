@@ -95,7 +95,7 @@
 					</c:if>
 					<c:if test="${ not empty user }">
 						<li><a href="user/logout.do"><span>로그아웃</span></a></li>
-						<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a></li>
+						<li class="top_menu"><a href="user/mypage.do"><strong>마이페이지</strong></a></li>
 					</c:if>
 					
 					
@@ -120,8 +120,8 @@
 						<li class="board_menu"><a href=""><span>게시판</span></a>
 							<ul>
 								<li><a href="free.do">자유게시판</a></li>
-								<li><a href="">오픈채팅</a></li>
-								<li><a href="">평점 및 후기</a></li>
+								<li><a href="chatting.do">오픈채팅</a></li>
+								<li><a href="grade.do">평점 및 후기</a></li>
 							</ul>
 						</li>	
 					</ul>
