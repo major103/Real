@@ -6,7 +6,7 @@ import vo.GradeVo;
 
 public interface GradeDao {
 
-	List<GradeVo>	list();
+	List<GradeVo>	selectList();
 	GradeVo			selectOne(int g_index);
 	
 	int 			insert(GradeVo vo);
