@@ -22,12 +22,12 @@
 		$("#u_id").keyup(function(event) {
 			var u_id = $(this).val();
 			
-			if(regular_id.test(u_id)==false){
+			/* if(regular_id.test(u_id)==false){
 				$("#id_msg").html("영문자/숫자조합의 3~16자리만 가능합니다").css("color","red");
 				//가입하기 버튼 비활성화
 				$("#btn_register").attr("disabled",true);
 				return;
-			}
+			} */
  			
 			if(regular_phone.test(u_phone)==false){
 				$("#phone_msg").html("번호가 이상합니다").css("color","red");
@@ -63,8 +63,6 @@
 					alert(err.responseText);
 				}
 			});
-			
-			
 		});
 	});
 	
