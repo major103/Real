@@ -23,8 +23,7 @@
 		//로그인여부
 		if ("${ empty user }" == "true") {
 
-			if (confirm("글쓰기는 로그인 후에 가능합니다\n로그인 하시겠습니까?") == false)
-				return;
+			if (confirm("글쓰기는 로그인 후에 가능합니다\n로그인 하시겠습니까?")==false)return;
 
 			//로그인폼으로 이동
 			location.href = "../user/login_form.do";
@@ -32,8 +31,8 @@
 			return;
 		}
 
-		//글쓰기 폼으로 이동( /board/insert_form.do )	  
-		location.href = "insert_form.do";
+		//글쓰기 폼으로 이동	  
+		location.href="insert_form.do";
 	}
 
 	function find() {
@@ -83,10 +82,7 @@
 		width:80%;
 		height: 500px;
 	}
-	
-	
-	
-	
+
 	
 </style>
 </head>
@@ -97,7 +93,7 @@
 					onclick="location.href='free/insert_form.do';">글쓰기</button>
 			</div>
 			<div>
-			<table id="tb1" class="table table-striped table-hover">
+			<table id="tb" class="table table-striped">
 				<tr>
 					<th>글번호</th>
 					<th>제목</th>
