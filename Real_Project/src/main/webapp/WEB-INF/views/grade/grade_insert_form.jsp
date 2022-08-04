@@ -5,10 +5,90 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+	//별점 마킹 모듈 프로토타입으로 생성
+	function Rating(){};
+	Rating.prototype.rate = 0;
+	Rating.prototype.setRate = function(newrate){
+	    //별점 마킹 - 클릭한 별 이하 모든 별 체크 처리
+	    this.rate = newrate;
+	    let items = document.querySelectorAll('.rate_radio');
+	    items.forEach(function(item, idx){
+	        if(idx < newrate){
+	            item.checked = true;
+	        }else{
+	            item.checked = false;
+	        }
+	    });
+	}
+	let rating = new Rating();//별점 인스턴스 생성
+
+</script>
+
+<style type="text/css">
+.wrap{
+    max-width: 480px;
+    margin: 0 auto; /* 화면 가운데로 */
+    background-color: #fff;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+.reviewform textarea{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.rating .rate_radio {
+    position: relative;
+    display: inline-block;
+    z-index: 20;
+    opacity: 0.001;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: top;
+    display: none;
+}
+.rating .rate_radio + label {
+    position: relative;
+    display: inline-block;
+    margin-left: -4px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-image: url('images/starrate.png');
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+.rating .rate_radio:checked + label {
+    background-color: #ff8;
+}
+
+.warning_msg {
+    display: none;
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    line-height: 26px;
+    width: 100%;
+    color: red;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+}
+</style>
+
 </head>
 <body>
 
-<form name="reviewform" class="reviewform" method="post" action="/save">
+<div class="wrap">
+    <h1>후기</h1>
+    <form name="reviewform" class="reviewform" method="post" action="/save">
         <input type="hidden" name="rate" id="rate" value="0"/>
         <p class="title_star">별점과 리뷰를 남겨주세요.</p>
  
@@ -36,6 +116,7 @@
             <input type="button" name="save" id="save" value="등록">
         </div>
     </form>
+</div>
 
 </body>
 </html>
