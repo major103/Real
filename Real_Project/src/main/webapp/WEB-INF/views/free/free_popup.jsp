@@ -13,7 +13,7 @@
 	</div>
 	
 	<div id="free_subject">제목</div>
-	<div id="user_id">작성자</div>
+	<div id="u_id">작성자</div>
 	<div id="free_org_f">첨부파일</div>
 	<div id="free_content">내용</div>
 	

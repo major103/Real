@@ -8,23 +8,12 @@
 </head>
 <body>
 
-<div>
-	<form enctype="multipart/form-data" method="post">
-		<div id="title">
-			<textarea name="title" id="title" placeholder="제목"></textarea>
-		</div>
+<div id="box">
+		<div id="title">${ vo.free_title }</div>
+		<div id="user">${ vo.u_id }</div>
+		<div id="content">${ vo.free_content }<input type="file"></div>
 		
-		<div id="content">
-			<textarea name="content" id="content" placeholder="내용"></textarea>
-		</div>
-		
-		<input type="file">
-		
-		<div>
-			<input type="button">
-		</div>
-		
-	</form>
+		<div></div>
 </div>
 
 </body>

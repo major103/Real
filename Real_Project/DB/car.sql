@@ -3,8 +3,6 @@
 
 select * from car
 
-
-
 create sequence seq_car_index
 --테이블
 

@@ -72,7 +72,7 @@
 				</tr>
 				<tr>
 					<th>첨부파일</th>
-					<td><input type="file" name="free_org_f"></td>
+					<td><input type="file" name="free_file"></td>
 				</tr>
 				<tr>
 					<th>내용</th>

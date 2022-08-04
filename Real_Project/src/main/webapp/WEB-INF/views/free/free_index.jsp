@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn"  uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <!DOCTYPE html>
 <html>
@@ -94,13 +95,11 @@
 			</div>
 			<div>
 			<table id="tb" class="table table-striped">
-				<tr>
+				<tr align="center">
 					<th>글번호</th>
 					<th>제목</th>
 					<th>작성자</th>
 					<th>등록일</th>
-					<th>첨부파일</th>
-					<th>조회수</th>
 				</tr>
 				<!-- 글이 없는 경우 -->
 				<c:if test="${ empty list }">
@@ -111,13 +110,11 @@
 
 				<!-- for(FreeVo vo : list)  -->
 				<c:forEach var="vo" items="${ list }">
-					<tr align="center">
-						<td>${ vo.free_index }</td>
+					<tr>
+						<td>${ vo.free_index }<a href="view.do?free_index=${ vo.free_index }"></a></td>
 						<td>${ vo.free_title }</td>
-						<td>${ vo.user_id }</td>
-						<td>${ vo.free_date }</td>
-						<td>${ vo.free_org_f }</td>
-						<td>${ vo.free_count }</td>
+						<td>${ vo.u_id }</td>
+						<td>${ fn:substring(vo.free_date,0,16) }</td>
 					</tr>
 				</c:forEach>
 

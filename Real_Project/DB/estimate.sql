@@ -12,7 +12,7 @@ create table estimate(
 	
 	e_index			int,						--
 	car_name		varchar2(100),		--fk	--차량 이름
-	e_option			varchar2(100),			--옵션
+	e_option		varchar2(100),			--옵션
 	e_price			int							--가격
 
 )

@@ -70,6 +70,9 @@ public class FreeController {
 			return "redirect:../user/login_form.do";
 		}
 		
+		String free_ip = request.getRemoteAddr();
+		vo.setFree_ip(free_ip);
+		
 		int res = free_dao.insert(vo);
 		
 		return "redirect:list.do";

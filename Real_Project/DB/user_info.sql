@@ -23,6 +23,7 @@
  	
  	)
  	
+ 	drop table user_info
 
  	--기본키
  	alter table user_info

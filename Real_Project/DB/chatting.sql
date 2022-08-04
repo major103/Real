@@ -7,8 +7,6 @@
 	--일련번호
 create sequence seq_chatting_c_index
 
-
-
 create table chatting(
 	
 	c_index			int,
