@@ -15,7 +15,7 @@
 <script type="text/javascript">
 	
 	function send(f){
-		var free_title		= f.free_title.value();
+		var free_title		= f.free_title.value.trim();
 		var free_content	= CKEDITOR.instances.free_content.getData().trim();
 		
 		if(free_title==''){

@@ -5,8 +5,7 @@ public class FreeVo {
 	int 	free_index;
 	String 	free_title;
 	String	free_content;
-	String	free_org_f;
-	String 	free_mod_f;
+	String	free_file;
 	String	free_date;
 	String	free_mod_date;
 	int		free_count;
@@ -32,17 +31,11 @@ public class FreeVo {
 	public void setFree_content(String free_content) {
 		this.free_content = free_content;
 	}
-	public String getFree_org_f() {
-		return free_org_f;
+	public String getFree_file() {
+		return free_file;
 	}
-	public void setFree_org_f(String free_org_f) {
-		this.free_org_f = free_org_f;
-	}
-	public String getFree_mod_f() {
-		return free_mod_f;
-	}
-	public void setFree_mod_f(String free_mod_f) {
-		this.free_mod_f = free_mod_f;
+	public void setFree_file(String free_file) {
+		this.free_file = free_file;
 	}
 	public String getFree_date() {
 		return free_date;

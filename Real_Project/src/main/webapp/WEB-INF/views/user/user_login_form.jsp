@@ -72,7 +72,7 @@
 			alert('로그아웃 되었습니다');
 			return;
 		}
-	}s
+	}
 	
 	function id_popup() {
 		var w_width = $(window).width();
