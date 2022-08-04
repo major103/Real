@@ -46,7 +46,15 @@ public class GradeController {
 	}
 	
 	@RequestMapping("insert.do")
-	public String insert(GradeVo vo) {
+	public String insert(GradeVo vo, Model model) {
+		if(session.getAttribute("user")==null) {
+			
+			model.addAttribute("reason", "session_timeout");
+			
+			return "redirect:../user/login_form.do";
+		}
+		
+		int res = grade_dao.insert(vo);
 		
 		return "redirect:list.do";
 	}
@@ -54,18 +62,32 @@ public class GradeController {
 	@RequestMapping("delete.do")
 	public String delete(int g_index) {
 		
+		int res = grade_dao.delete(g_index);
+		
 		return "redirect:list.do";
 	}
 	
 	@RequestMapping("modify_form.do")
-	public String modify_form(int g_index) {
+	public String modify_form(int g_index, Model model) {
+		
+		GradeVo  vo = grade_dao.selectOne(g_index);
+		
+		model.addAttribute("vo", vo);
 		
 		return "grade/grade_modify_form";
 	}
 	
 	@RequestMapping("modify_do")
-	public String modify(GradeVo vo) {
+	public String modify(GradeVo vo, Model model) {
 		
-		return "";
+		if(session.getAttribute("user")==null) {
+			
+			model.addAttribute("reason", "session_timeout");
+			
+			return "redirect:../user/login_form.do";
+		}
+		int res = grade_dao.update(vo);
+		
+		return "redirect:list.do";
 	}
 }
