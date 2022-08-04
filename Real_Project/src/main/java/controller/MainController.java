@@ -24,4 +24,10 @@ public class MainController {
 		return "free/free_list";
 	}
 	
+	@RequestMapping("/grade.do")
+	public String grade() {
+		
+		return "grade/grade_list";
+	}
+	
 }

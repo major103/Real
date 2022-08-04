@@ -27,7 +27,7 @@
 				return;
 
 			//로그인폼으로 이동
-			location.href = "../user/user_login_form.do";
+			location.href = "../user/login_form.do";
 
 			return;
 		}
