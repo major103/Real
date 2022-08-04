@@ -101,8 +101,8 @@
 				<tr>
 					<td style="text-align: center" colspan="2"><input
 						style="text-align: center" type="button" class="btn btn-secondary"
-						value="등록하기" onclick="send(this.form);"> <input
-						style="text-align: center" type="button" class="btn btn-dark"
+						value="등록하기" onclick="send(this.form);"> 
+						<input style="text-align: center" type="button" class="btn btn-dark"
 						value="목록보기" onclick="location.href='list.do';"></td>
 				</tr>
 			</table>

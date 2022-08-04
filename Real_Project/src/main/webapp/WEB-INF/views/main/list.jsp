@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Real_Project/src/main/webapp/WEB-INF/views/main/sub/list.jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
@@ -16,16 +15,11 @@
 <script type="text/javascript" src="${ path }/resources/js/clipboard.js"></script>
 <script type="text/javascript" src="${ path }/resources/js/jquery-ui.js"></script>
 <script type="text/javascript" src="${ path }/resources/js/jquery-1.11.1.min.js"></script>
-=======
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>NEWCAR | MOTOR TREND</title>
-
 
 <link rel="stylesheet"  href="${ pageContext.request.contextPath }/resources/css/basic.css">
 
@@ -39,8 +33,6 @@
 <script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/script.js"></script>
 <script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/clipboard.js"></script>
 
-
->>>>>>> 585ca4921a6992fd90f34540d91d54ea5d7bd6fc:Real_Project/src/main/webapp/WEB-INF/views/main/list.jsp
 </head>
 <body>
 

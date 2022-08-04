@@ -116,7 +116,6 @@
 								<li><a href="#">차량비교</a></li>
 							</ul>
 						</li>
-						<li><a href=""><span>매장검색</span></a></li>
 						<li class="board_menu"><a href=""><span>게시판</span></a>
 							<ul>
 								<li><a href="free.do">자유게시판</a></li>

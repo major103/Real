@@ -15,7 +15,7 @@ public class GradeDaoImpl implements GradeDao {
 	}
 
 	@Override
-	public List<GradeVo> list() {
+	public List<GradeVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("grade.grade_list");
 	}

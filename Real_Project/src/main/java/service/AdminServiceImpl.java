@@ -115,7 +115,7 @@ public class AdminServiceImpl implements AdminService {
 	public Map grade_List() {
 		// TODO Auto-generated method stub
 
-		List<GradeVo> grade_list = grade_dao.list();
+		List<GradeVo> grade_list = grade_dao.selectList();
 
 		Map map = new HashMap();
 		map.put("grade_list", grade_list);
